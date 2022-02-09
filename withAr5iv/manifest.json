@@ -1,0 +1,15 @@
+{
+  "name": "withAr5iv",
+  "short_name": "withAr5iv",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "ArXiv with Ar5iv",
+  "permissions": [
+      "https://arxiv.org/",
+      "http://arxiv.org/"
+  ],
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": ["withar5.js"],
+    "all_frames": true
+  }]}
