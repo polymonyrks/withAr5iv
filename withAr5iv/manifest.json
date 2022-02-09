@@ -4,12 +4,21 @@
   "version": "1.0",
   "manifest_version": 3,
   "description": "ArXiv with Ar5iv",
-  "permissions": [
+  "host_permissions": [
       "https://arxiv.org/",
       "http://arxiv.org/"
   ],
   "content_scripts": [{
-    "matches": [ "http://*/*", "https://*/*" ],
-    "js": ["withar5.js"],
+    "matches": [ "*://*.arxiv.org/*" ],
+    "js": ["withAr5iv.js"],
     "all_frames": true
-  }]}
+  }],
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "48": "48.png",
+    "128": "128.png"
+  }
+
+}
+
