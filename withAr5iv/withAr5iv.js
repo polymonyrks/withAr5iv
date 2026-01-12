@@ -13,9 +13,9 @@ if (isArxiv) {
   let aTagsPrim = Array.from(document.getElementsByTagName("a"));
   aTagsPrim.map((ele) => {
     let linkTo = ele.href;
-    let formatPrefix = "https://arxiv.org/format/";
-    if (isPrefixOf(formatPrefix, linkTo)) {
-      let dropped = linkTo.slice(formatPrefix.length);
+    let pdfPrefix = "https://arxiv.org/pdf/";
+    if (isPrefixOf(pdfPrefix, linkTo)) {
+      let dropped = linkTo.slice(pdfPrefix.length).split(/[?#]/)[0].replace(/\.pdf$/, "");
       let url = "https://ar5iv.org/abs/" + dropped;
       let a = document.createElement("a");
       a.href = url;
